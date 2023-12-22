@@ -1,3 +1,9 @@
+let numA, numB, operator;
+
+function operate() {
+    
+}
+
 function add(a, b) {
     return a+b;
 }
