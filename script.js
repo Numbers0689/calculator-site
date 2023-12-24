@@ -1,13 +1,93 @@
-let numA, numB, operator;
+let numA, numB, operator, temp="";
 const display = document.querySelector('#display');
-const one = document.querySelector('.num.1');
+
+const one = document.querySelector('#one');
+const two = document.querySelector('#two');
+const three = document.querySelector('#three');
+const four = document.querySelector('#four');
+const five = document.querySelector('#five');
+const six = document.querySelector('#six');
+const seven = document.querySelector('#seven');
+const eight = document.querySelector('#eight');
+const nine = document.querySelector('#nine');
+const zero = document.querySelector('#zero');
+const plus = document.querySelector('#plus');
+const minus = document.querySelector('#minus');
+const multi = document.querySelector('#multiply');
+const divid = document.querySelector('#divide');
+const equal = document.querySelector('#last');
+const decimal = document.querySelector('#decimal');
+const del = document.querySelector('#del');
+const clear = document.querySelector('#clear');
+const percent = document.querySelector('#percentage');
+
+clear.addEventListener('click', () => {
+    temp = "";
+    display.textContent = temp;
+});
+
+del.addEventListener('click', () => {
+    temp = temp.slice(0, -1);
+    display.textContent = temp;
+});
+
+decimal.addEventListener('click', () => {
+    if (!temp.includes(".")){
+        temp += ".";
+        display.textContent = temp;
+    }
+});
 
 one.addEventListener('click', () => {
-    display.textContent = "1";
-    console.log("works");
-})
+    temp += "1";
+    display.textContent = temp;
+});
 
-display.textContent = "455435";
+two.addEventListener('click', () => {
+    temp += "2";
+    display.textContent = temp;
+});
+
+three.addEventListener('click', () => {
+    temp += "3";
+    display.textContent = temp;
+});
+
+four.addEventListener('click', () => {
+    temp += "4";
+    display.textContent = temp;
+});
+
+five.addEventListener('click', () => {
+    temp += "5";
+    display.textContent = temp;
+});
+
+six.addEventListener('click', () => {
+    temp += "6";
+    display.textContent = temp;
+});
+
+seven.addEventListener('click', () => {
+    temp += "7";
+    display.textContent = temp;
+});
+
+eight.addEventListener('click', () => {
+    temp += "8";
+    display.textContent = temp;
+});
+
+nine.addEventListener('click', () => {
+    temp += "9";
+    display.textContent = temp;
+});
+
+zero.addEventListener('click', () => {
+    temp += "0";
+    display.textContent = temp;
+});
+// display.textContent = "455435";
 
 function operate(a, b, operator) {
     switch (operator) {
@@ -44,11 +124,3 @@ function divide(a, b) {
     return a/b;
 }
 
-// console.log(add(11, 14));
-// console.log(add(11.5, 13.5));
-// console.log(subtract(11, 14));
-// console.log(subtract(11.5, 13.5));
-// console.log(multiply(11, 14));
-// console.log(multiply(11.5, 13.5));
-// console.log(divide(11, 14));
-// console.log(divide(11.5, 13.5));
