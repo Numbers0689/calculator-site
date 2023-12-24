@@ -1,4 +1,4 @@
-let numA, numB, operator, temp="";
+let numA="", numB="", operator="", temp="";
 const display = document.querySelector('#display');
 
 const one = document.querySelector('#one');
@@ -23,11 +23,14 @@ const percent = document.querySelector('#percentage');
 
 clear.addEventListener('click', () => {
     temp = "";
+    numA = "";
+    numB = "";
+    operator = "";
     display.textContent = temp;
 });
 
 del.addEventListener('click', () => {
-    temp = temp.slice(0, -1);
+    temp = temp.toString().slice(0, -1);
     display.textContent = temp;
 });
 
@@ -37,6 +40,50 @@ decimal.addEventListener('click', () => {
         display.textContent = temp;
     }
 });
+
+plus.addEventListener('click', () => {
+    numA = temp;
+    temp = "";
+    operator = "+";
+    display.textContent = temp;
+});
+
+minus.addEventListener('click', () => {
+    numA = temp;
+    temp = "";
+    operator = "-";
+    display.textContent = temp;
+});
+
+multi.addEventListener('click', () => {
+    numA = temp;
+    temp = "";
+    operator = "*";
+    display.textContent = temp;
+});
+
+divid.addEventListener('click', () => {
+    numA = temp;
+    temp = "";
+    operator = "/";
+    display.textContent = temp;
+});
+
+equal.addEventListener('click', () => {
+    numB = temp;
+    if (operator === "/" && numB == 0)
+    {
+        display.textContent = "ERROR";
+        
+    }
+    else
+    {
+        temp = operate(Number(numA), Number(numB), operator);
+        operator = "";
+        display.textContent = temp;
+    }
+});
+
 
 one.addEventListener('click', () => {
     temp += "1";
@@ -87,7 +134,7 @@ zero.addEventListener('click', () => {
     temp += "0";
     display.textContent = temp;
 });
-// display.textContent = "455435";
+
 
 function operate(a, b, operator) {
     switch (operator) {
@@ -102,9 +149,9 @@ function operate(a, b, operator) {
         
         case "/":
             return divide(a, b);
-
+        
         default:
-            return "Invalid";
+            return "";
     }
 }
 
