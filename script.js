@@ -1,5 +1,6 @@
 let numA="", numB="", operator="", temp="";
 const display = document.querySelector('#display');
+const prev = document.querySelector('#prev');
 
 const one = document.querySelector('#one');
 const two = document.querySelector('#two');
@@ -27,6 +28,7 @@ clear.addEventListener('click', () => {
     numB = "";
     operator = "";
     display.textContent = temp;
+    prev.textContent = "";
 });
 
 del.addEventListener('click', () => {
@@ -46,6 +48,7 @@ plus.addEventListener('click', () => {
     temp = "";
     operator = "+";
     display.textContent = temp;
+    if(numA !== "") prev.textContent = numA+operator;
 });
 
 minus.addEventListener('click', () => {
@@ -53,6 +56,7 @@ minus.addEventListener('click', () => {
     temp = "";
     operator = "-";
     display.textContent = temp;
+    if(numA !== "") prev.textContent = numA+operator;
 });
 
 multi.addEventListener('click', () => {
@@ -60,6 +64,7 @@ multi.addEventListener('click', () => {
     temp = "";
     operator = "*";
     display.textContent = temp;
+    if(numA !== "") prev.textContent = numA+operator;
 });
 
 divid.addEventListener('click', () => {
@@ -67,6 +72,7 @@ divid.addEventListener('click', () => {
     temp = "";
     operator = "/";
     display.textContent = temp;
+    if(numA !== "") prev.textContent = numA+operator;
 });
 
 equal.addEventListener('click', () => {
@@ -80,7 +86,17 @@ equal.addEventListener('click', () => {
     {
         temp = operate(Number(numA), Number(numB), operator);
         operator = "";
-        display.textContent = temp.toFixed(9);
+        prev.textContent = "";
+        if (temp.toString().includes("."))
+        {
+            display.textContent = temp.toFixed(9);
+            console.log("ee");
+        }
+        else
+        {
+            display.textContent = temp;
+
+        }
     }
 });
 

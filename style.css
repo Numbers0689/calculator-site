@@ -43,7 +43,7 @@
     width: 150px;
 }
 
-#display {
+#displayy {
     padding: 10px 10px;
     height: auto;
     min-height: 60px;
@@ -57,6 +57,11 @@
     text-align: right;
     color: #14343E;
     word-wrap: break-word;
+}
+
+#prev {
+    color: #34545e;
+    font-size: 22px;
 }
 
 body {
