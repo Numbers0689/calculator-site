@@ -6,7 +6,7 @@
     height: fit-content;
     border-radius: 15px;
     padding: 10px;
-    box-shadow: 2px 2px 20px 2px black;
+    box-shadow: 3px 3px 20px 1px black;
     margin-top: 100px;
 
     /* position: absolute;
@@ -24,14 +24,21 @@
     font-weight: 500;
     font-size: 20px;
     margin: 3px;
+    margin-top: 6px;
     background-color: #2F2A50;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
     transition-duration: 0.2s;
+    cursor: pointer;
+    border: none;
 }
 
 .num:hover {
     background-color: #6054A0;
+}
+
+.num:active {
+    transform: translateY(3px) translateX(3px);
 }
 
 .del:hover {
@@ -44,14 +51,16 @@
 }
 
 #display {
-    padding: 30px 10px;
+    padding: 10px 10px;
+    height: 60px;
     background-color: #CCDCE0;
     margin-bottom: 10px;
     margin-top: 8px;
     border-radius: 15px;
-    font-size: 24px;
+    font-size: 36px;
     font-family: 'Courier New', Courier, monospace;
     text-align: right;
+    color: #14343E;
 }
 
 body {
