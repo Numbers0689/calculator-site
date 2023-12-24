@@ -7,13 +7,14 @@
     border-radius: 15px;
     padding: 10px;
     box-shadow: 2px 2px 20px 2px black;
+    margin-top: 100px;
 
-    position: absolute;
+    /* position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto; */
 }
 
 .num {
@@ -26,6 +27,16 @@
     background-color: #2F2A50;
     color: aliceblue;
     font-family: 'Courier New', Courier, monospace;
+    transition-duration: 0.2s;
+}
+
+.num:hover {
+    background-color: #6054A0;
+}
+
+.del:hover {
+    background-color: #CC001F;
+    /* color: #042A2B; */
 }
 
 #last {
@@ -38,12 +49,24 @@
     margin-bottom: 10px;
     margin-top: 8px;
     border-radius: 15px;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
 }
 
 body {
     background-color: #2F2A50;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-footer {
+a {
     color: #CCDCE0;
+    font-family: 'Courier New', Courier, monospace;
+    bottom: 50px;
+    text-decoration: none;    
+    position: absolute;
 }
