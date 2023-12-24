@@ -80,7 +80,7 @@ equal.addEventListener('click', () => {
     {
         temp = operate(Number(numA), Number(numB), operator);
         operator = "";
-        display.textContent = temp;
+        display.textContent = temp.toFixed(9);
     }
 });
 
