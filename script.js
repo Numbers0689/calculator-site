@@ -37,7 +37,7 @@ del.addEventListener('click', () => {
 });
 
 decimal.addEventListener('click', () => {
-    if (!temp.includes(".")){
+    if (!temp.toString().includes(".")){
         temp += ".";
         display.textContent = temp;
     }
@@ -94,7 +94,6 @@ equal.addEventListener('click', () => {
         if (temp.toString().includes("."))
         {
             display.textContent = temp.toFixed(9);
-            console.log("ee");
         }
         else
         {
