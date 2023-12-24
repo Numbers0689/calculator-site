@@ -49,6 +49,7 @@ plus.addEventListener('click', () => {
     operator = "+";
     display.textContent = temp;
     if(numA !== "") prev.textContent = numA+operator;
+    else prev.textContent = "";
 });
 
 minus.addEventListener('click', () => {
@@ -57,6 +58,7 @@ minus.addEventListener('click', () => {
     operator = "-";
     display.textContent = temp;
     if(numA !== "") prev.textContent = numA+operator;
+    else prev.textContent = "";
 });
 
 multi.addEventListener('click', () => {
@@ -65,6 +67,7 @@ multi.addEventListener('click', () => {
     operator = "*";
     display.textContent = temp;
     if(numA !== "") prev.textContent = numA+operator;
+    else prev.textContent = "";
 });
 
 divid.addEventListener('click', () => {
@@ -73,6 +76,7 @@ divid.addEventListener('click', () => {
     operator = "/";
     display.textContent = temp;
     if(numA !== "") prev.textContent = numA+operator;
+    else prev.textContent = "";
 });
 
 equal.addEventListener('click', () => {
